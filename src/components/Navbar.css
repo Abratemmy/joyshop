@@ -1,0 +1,217 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.inside-container{
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 10px
+}
+.container1{
+    margin:0 auto;
+    background: #fff;
+    box-shadow: 0px 15px 25px -15px var(--purpleColor);
+}
+nav{
+    background: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100px
+}
+.sticky{
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+nav .logo-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    align-items: center;
+    border-bottom: 1px solid var(--purpleColor);
+}
+nav .logo-btn img{
+    width: 100px !important;
+    padding-right: 5px;
+}
+nav .logo-btn a{
+    font-size: 20px; color: red;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+nav .logo-btn .btn{
+    color: var(--purpleColor);
+    cursor: pointer;
+    font-size: 22px;
+}
+.links{
+    background: var(--primaryColor);
+    transform: translateX(-100%);
+    bottom: 0;
+    top: 100px;
+    width: 100%;
+    position: fixed;
+    transition: 0.4s ease-in-out;
+}
+.newLinks{
+    background: var(--primaryColor);
+    transform: translateX(0);
+    top: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.links li a{
+    color: var(--purpleColor);
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s all ease-in-out;
+    border-bottom: 1px solid var(--purpleColor);
+    text-transform: capitalize;
+    position: relative;
+    font-family: var(--textFamily);
+    font-weight: 600;
+    text-decoration: none;
+}
+.links li a:hover{
+    padding: 10px 20px;
+    color: #fff;
+}
+.links li a:after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px dashed tomato;
+    height: auto;
+    display: block;
+    bottom:0;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+
+}
+.links li a:hover:after{
+    left:0;
+}
+.cart{
+    color:var(--primaryColor);
+    cursor:pointer;
+    align-self: center;
+    position: relative;
+    font-size: 25px;
+}
+.cart span{
+    position: absolute;
+    font-size: 15px;
+    top:-10px;
+    right: -17px;
+    background: var(--purpleColor);
+    padding:1px;
+    border-radius: 50%;
+    text-align: center;
+    width: 18px;
+    height: 22px;
+    font-weight: bold;
+    z-index: 1;
+}
+.carta{
+    display: none;
+}
+@media screen and (min-width: 700px){
+    nav .logo-btn{
+        border-bottom: none
+    }
+    .logo-btn .btn{
+        display: none;
+    }
+    nav{
+        display: flex;
+        background: transparent;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        background: transparent;
+        transform: translate(0);
+        position: relative;
+        top: auto;
+        bottom: 0;
+    }
+    .links li a{
+        border-bottom: none;
+        margin-left: 25px;
+    }
+    .links li a:hover{
+        padding:10px;
+        color: var(--primaryColor)
+    }
+    .links li a:after{
+        border-bottom: none;
+    }
+    .links li a:hover:after{
+        border-bottom: none;
+    }
+    .hide{
+        display: none;
+    }
+    .dra{
+        display: flex;
+        align-items: center;
+        padding-right:10px;
+    }
+    .carta{
+        display: block;
+        margin-left: 10px;
+        cursor:pointer;
+        color: var(--primaryColor);
+        position: relative;
+        padding-left: 25px;
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+    .carta span{
+        position: absolute;
+        top: -3px;
+        right: -8px;
+        background: var(--purpleColor);
+        border-radius: 50%;
+        text-align: center;
+        width: 17px;
+        height: 17px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+
+/* css for footer */
+.footer{
+    background: var(--primaryColor);
+    padding: 30px 0px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--textFamily);
+    color: var(--blackColor);
+    font-size: 17px;
+    font-weight: 600
+}
+.footer-container a{
+    color: var(--purpleColor);
+    text-decoration: none;
+}
+.footer-container a:hover{
+    color:var(--purpleColor)
+} 
+@media screen and (max-width: 660px){
+    .footer-container{
+        display: block;
+        text-align: center;
+    }
+}

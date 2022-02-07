@@ -1,0 +1,111 @@
+.det{
+    padding: 5px 0px 40px 0px;
+}
+.det-center{
+    box-shadow: 1px 1px 4px 1px gray;
+}
+.det h2{
+    text-align: center;
+    font-family: var(--textFamily);
+    margin: 30px 0px;
+    color: var(--blackColor);
+    letter-spacing: 0.1rem;
+}
+.det-center .det-img{
+    width: 100%;
+   
+}
+.det-center .det-img img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.det-info{
+    margin-top:20px;
+    padding: 0px 10px;
+}
+.det-info h3, .det-info h4,
+.det-info p, .det-info .but-options{
+    margin-bottom: 15px;
+}
+.det-info h3{
+    text-align: center;
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+    color: var(--blackColor)
+}
+.det-info h4{
+    letter-spacing: 0.1rem;
+}
+.det-info span{
+    color: crimson;
+}
+.det-info .but-options{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:30px;
+}
+
+.but-options button{
+    margin: 10px 10px;
+    width: 160px;
+    padding: 10px 10px;
+    font-size:17px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    border: 1px solid var(--purpleColor);
+    color: var(--blackColor);
+    transition: all 0.4s ease-in-out;
+}
+
+.but-options button:hover{
+    background: var(--primaryColor);
+    border: 1px solid var(--purpleColor);
+    color: var(--blackColor);
+}
+.enabled{
+    background: gray!important;
+}
+.disabled{
+    background: green!important;
+}
+
+@media screen and (min-width:664px){
+    .det-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .det-center .det-img{
+        position: relative;
+    }
+    .det-center .det-img:after{
+        content:"";
+        position: absolute;
+        border-right: 1px solid var(--purpleColor);
+        height: 100%;
+        right:0;
+        top:0;
+    }
+    .det-center .det-img img{
+        width: 100%;
+    }
+    .det-center .det-info, .det-center .det-img{
+        flex:0 0 calc(49% - 10px);
+    }
+    .det-info .but-options{
+        display:flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .but-options button{
+        margin: 10px 3px;
+        font-size:18px;
+        padding: 10px;
+    }
+}
+.but-options button:first-child{
+    margin-right: 10px;
+}

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Router from './components/Router'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <React.Fragment>
+      <Navbar />
+      <Router />
+
+
+    {/* footer css is inside navbar.css */}
+      <div className="footer">
+        <div className="container footer-container">
+            <div className="row">
+              © 2022 Joy Agunbiade Stores. All rights reserved
+            </div>
+
+            <div className="">
+              Built by <a href="https://abratemmy.github.io/myportfolio">hayteetech</a>
+            </div>
+        </div>
+      </div>
+
+      
+
+
+
+   </React.Fragment>
   );
 }
 
