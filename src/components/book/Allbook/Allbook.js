@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { ProductConsumer } from '../../Context';
 import {Link} from "react-router-dom";
-import { ProductConsumer } from './Context';
 import {FaShoppingCart} from "react-icons/fa";
 
-export class Product extends Component {
+export class Allbook extends Component {
   render(props) {
-    const{id, acf, title}=this.props.data
+    const{id, acf, title}=this.props.bookdata
     const {closeNavCart, addToCart} = this.props;
-  
+
     return (
-      <ProductConsumer>
-        {value=>{
+        <ProductConsumer>
+            {value=>{
             return(
               <div className="product">
-                  <Link to={`/details/${id}`} onClick={closeNavCart} >
+                  <Link to={`/books/${id}`} onClick={closeNavCart} >
                       <div className="img-div">
-                          <img src={acf.image.url} alt=""/>              
+                          <img src={acf.image} alt=""/>              
                       </div>
                   </Link>
               
@@ -40,8 +40,8 @@ export class Product extends Component {
             )
         }}
       </ProductConsumer>
-      )
+    )
   }
 }
 
-export default Product;
+export default Allbook

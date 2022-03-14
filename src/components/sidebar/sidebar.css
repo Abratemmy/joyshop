@@ -1,0 +1,24 @@
+.sidebar{
+    background:rgb(235, 235, 235);
+    padding: 10px;
+}
+.sidebar-link{
+    background: rgb(161, 161, 161);
+    margin-bottom: 5px;
+    border-left: 4px solid var(--blackColor);
+    padding: 10px;
+}
+.sidebar-link:hover{
+    background: var(--blackColor);
+}
+.sidebar-nav{
+    text-decoration: none;
+    color: var(--blackColor);
+    font-size: 16px;
+    font-family: var(--textFamily);
+    font-weight: 600;
+    background: none;
+}
+.sidebar-nav:hover{
+    color:#fff;
+}

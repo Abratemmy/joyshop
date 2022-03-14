@@ -1,0 +1,78 @@
+.home-bookpage{
+    margin: 40px 0px;
+    padding: 20px 0px;
+    border: 1px solid rgb(180, 180, 180);
+    background: #fff;
+}
+.home-bookpage h2{
+    padding: 0px 30px 30px 30px;
+    text-transform: capitalize;
+    color: var(--blackColor)
+}
+.home-slider{
+    padding: 10px 30px;
+}
+.book-img img{
+    width: 100%;
+    height: 200px;
+}
+.home-book-content{
+    padding:0px 10px;
+    text-align: center;
+}
+.homebook-nav{
+    text-decoration: none;
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    transition: 0.4s all ease-in-out;
+}
+.homebook-nav:hover{
+    color: var(--blackColor)
+}
+.home-title{
+    padding: 15px 0px 10px 0px;
+    font-size: 18px;
+    font-family: var(--textFamily);
+    
+}
+.home-book-content p{
+    font-family: var(--textFamily);
+    font-size: 16px;
+    color: var(--blackColor)
+}
+.home-icon{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+.home-icon button{
+    border: none;
+    outline: none;
+    background: none;
+}
+.home-icon button  .react-icon{
+ font-size: 30px;
+ background: var(--blackColor);
+ color:#fff;
+ border-radius: 50%;
+}
+.homeview-nav{
+    text-decoration: none;
+}
+.home-bookpage .view-all{
+    padding: 5px 20px 10px 30px;
+    font-family: var(--textFamily);
+    color:var(--blackColor);
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.4s all ease-in-out;
+}
+.home-bookpage .view-all:hover{
+    color: var(--primaryColor);
+}
+
+/* code to display cloth */
+.home-clothpage{
+    background:rgb(235, 235, 235);
+}

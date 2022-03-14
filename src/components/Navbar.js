@@ -30,8 +30,9 @@ function Navbar() {
                             <div className="dra">
                                 <div className="drawers">
                                     <ul className={navOpen ? "newLinks links" :"links"} onClick={closeNavCart}>
-                                        <li><Link to="/">Home</Link></li>
-                                        <li><Link to="/products">Products</Link></li>
+                                        <li><a href="https://joyagunbiade.com" target="_blank" rel="noreferrer">Joy Agunbiade</a></li>
+                                        {/* <li><Link to="/products">Products</Link></li> */}
+                                        <li><Link to="/free_ebook">Free e-Book</Link></li>
                                         {/* <li><Link to="/products">Products</Link></li>
                                         <li><Link to="/products">Products</Link></li> */}
                                     </ul>

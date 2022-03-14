@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Router from './components/Router'
+import Router from './components/Router';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {

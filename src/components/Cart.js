@@ -39,7 +39,7 @@ function Cart(props) {
                                         </div>
 
                                         <div className="inc-dec-cart">
-                                            <button onClick={()=>decreaseItem(product.id)}>-</button>
+                                            <button onClick={()=>decreaseItem(product.id)}> - </button>
                                                 {product.acf.count}
                                             <button onClick={()=>increaseItem(product.id)}>+</button>
                                         </div>
@@ -57,13 +57,13 @@ function Cart(props) {
                             })}
                             {/* total */}
                             <div className="extra -info">
-                                <h3><span>amount: </span>${total}</h3>
+                                <div className="extra-text"><span>Amount: </span>${total}</div>
 
                                 <div className="shipping">
-                                    <h3><span>Shipping:</span>{total > 90? "free" : `+ ${shipping}`} </h3>
+                                    <div className="extra-text"><span>Shipping:</span>{total > 90? "free" : `+ ${shipping}`} </div>
                                 </div>
 
-                                <h3><span> total amount :</span> ${total> 90 ? total : total + shipping}</h3>
+                                <div className='extra-text'><span> Total Amount :</span> ${total> 90 ? total : total + shipping}</div>
 
                                 <div className="payment" onClick={closeNavCart}>
                                     <Link to="/payment" >payment</Link>

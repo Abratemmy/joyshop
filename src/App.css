@@ -25,7 +25,7 @@
   text-align: center; 
 }
 .cartNav{
-  background: red;
+  /* background: red; */
   position: fixed;
   top:100px;
   bottom: 0;
@@ -35,27 +35,29 @@
   border-top: 2px solid green
 }
 .newCartNav{
-  background: red;
+  /* background: red; */
   position: fixed;
   top: 100px;
   bottom: 0;
   right:0;
   width: 100%;
   border-top:2px solid gray;
+  min-height: 200px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
 }
 @media screen and (min-width: 700px){
   .cartNav{
-    background: red;
+    /* background: red; */
     position: fixed;
     bottom:0;
     right:-100%;
     width: 100%;
     transition: all 0.5s ease-in-out;
-    overflow: hidden;
   }
   .newCartNav{
     right:0;
-    width: 390px
+    width: 420px
   }
  
 }
@@ -102,8 +104,8 @@
   grid-template-columns: auto 1fr 70px 50px;
   text-align: center;
   align-items: center;
-  gap: 15px;
-  padding: 5px 15px;
+  gap: 10px;
+  padding: 5px 5px;
 }
 .item-cart p{
   color: rgb(36, 35, 35);
@@ -115,7 +117,7 @@
   justify-content: space-between;
 }
 .inc-dec-cart button{
-  padding: 3px 7px;
+  padding: 1px 5px;
   outline: none;
   border: 1px solid transparent;
   background: rgb(197, 196, 196);
@@ -131,13 +133,15 @@
   text-align: right;
   font-weight: bold;
   font-style: italic;
+  padding-top: 20px;
 }
 .del-item{
   position: absolute;
-  right: 10px;
-  top: 0;
+  right: 2px;
+  top: -5px;
   cursor: pointer;
   padding: 2px 10px;
+  padding-left: 10px!important;
   /* color: var(--blackColor) */
 }
 .del-item:hover{
@@ -150,14 +154,15 @@
   margin: 20px 10px;
   font-family: var(--textFamily);
 }
-.extra-info h3{
-  color: rgb(58, 58, 58);
+.extra-text{
+  color: black;
   font-style: italic;
   letter-spacing: 0.1rem;
-  color: rgb(168, 14, 45);
-
+  font-size: 20px!important;
+  font-family: var(--textFamily);
+  font-weight: 600
 }
-.extra-info h3 span{
+.extra-info .extra-text span{
   color: rgb(58, 58, 58);
   text-transform: capitalize;
 }
@@ -172,6 +177,7 @@
   font-size: 18px;
   text-align: center;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
 }
 .payment a:hover{
   border: 1px solid rgb(240, 238,238);
@@ -270,8 +276,8 @@
     flex-wrap: wrap;
   }
   .product{
-    flex:0 0 calc(50% - 20px);
-    margin-bottom: 20px;
+    flex:0 0 calc(50% - 40px)!important;
+    margin-bottom: 50px!important;
   }
 }
 @media screen and (min-width:876px){
@@ -281,9 +287,9 @@
     justify-content: space-between;
   }
   .product{
-    flex:0 0 calc(33.3% - 20px);
+    flex:0 0 calc(33.3% - 40px)!important;
     margin-bottom: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 50px!important;
   }
 }
 @media screen and (min-width:976px){
@@ -302,8 +308,8 @@
 /* css for home */
 .header{
   width: 100%;
-  background: url("./components/image/joyshoppics.jpg")center center/ cover no-repeat;
-  min-height: 70vh;
+  background: url("./components/image/joyshop.jpg")center center/ cover no-repeat;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
 }
@@ -311,8 +317,8 @@
   box-shadow: 1px 1px 4px 1px var(--purpleColor);
   padding: 10px;
   align-self: baseline;
-  margin-top: 130px;
-  width: 90%;
+  margin-top: 110px;
+  width: 80%;
   text-align: center;
   background:rgba(0,0,0,0.4);
 }
@@ -431,7 +437,7 @@
 }
 @media screen and (min-width: 664px){
   .header{
-    background: url('./components/image/joyshoppics.jpg') center center/ cover fixed no-repeat;
+    background: url('./components/image/joyshop.jpg') center center/ cover fixed no-repeat;
     width: 100%;
   }
   .header-info h1{

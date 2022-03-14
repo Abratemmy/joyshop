@@ -2,6 +2,7 @@ import React from 'react';
 import { ProductConsumer } from './Context';
 import {useParams, Link} from "react-router-dom";
 import "./Details.css";
+import {FaShoppingCart} from "react-icons/fa"
 
 function Details(props) {
   const { id } = useParams();
@@ -10,7 +11,7 @@ function Details(props) {
   return(
     <ProductConsumer>
         {value=>{
-          const {data} = value;         
+          const {data,addToCart} = value;         
           console.log(id);
 
           let results= data.find(data=>data.id===parseInt(id));
@@ -32,8 +33,14 @@ function Details(props) {
                           <div className="but-options">
                             <Link to="/products">
                               <button className="back-products">Back to products</button>
-                              <button className="add-toCart">Add to Cart</button>
                             </Link>
+                              
+                            {/* <button className="add-toCart" onClick={()=>addToCart(results.id)}>Add to Cart</button> */}
+                            
+                            <button onClick={()=>addToCart(results.id)} className={(results.acf.isincart)===true?'disabled':''}> 
+                              <FaShoppingCart />{(results.acf.isincart)===true?"Already in cart":"Add to cart"} 
+                            </button>
+
                           </div>
                         </div>
                     </div>
